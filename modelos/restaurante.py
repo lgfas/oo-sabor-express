@@ -46,3 +46,6 @@ class Restaurante:
     def adicionar_no_cardapio(self, item):
         if isinstance(item, ItemCardapio):
             self._cardapio.append(item)
+    
+    def teste():
+        pass
