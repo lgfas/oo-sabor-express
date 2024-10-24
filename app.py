@@ -1,13 +1,18 @@
 from modelos.restaurante import Restaurante
+from modelos.cardapio.bebida import Bebida
+from modelos.cardapio.prato import Prato
 
 restaurante_praca = Restaurante('praça', 'Gourmet')
 
-restaurante_praca.receber_avaliacao('gui', 10)
-restaurante_praca.receber_avaliacao('caua', 8)
-restaurante_praca.receber_avaliacao('peixada', 5)
+bebida_suco = Bebida('Suco de Melancia', 5.0, 'Grande')
+prato_paozinho = Prato('Paozinho', 2.00, 'O melhor pao da cidade')
+
+restaurante_praca.adicionar_no_cardapio(bebida_suco)
+restaurante_praca.adicionar_no_cardapio(prato_paozinho)
 
 def main():
-    Restaurante.listar_restaurantes()
+    print(bebida_suco)
+    print(prato_paozinho)
 
 if __name__ == '__main__':
     main()
